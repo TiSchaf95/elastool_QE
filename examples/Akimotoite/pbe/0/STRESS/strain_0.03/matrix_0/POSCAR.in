@@ -1,0 +1,51 @@
+&CONTROL
+   calculation      = 'relax'
+   tstress          = .true.
+   tprnfor          = .true.
+   prefix           = 'Aknew_'
+/
+&SYSTEM
+   ecutwfc          = 80
+   ecutrho          = 600
+   ntyp             = 3
+   nat              = 10
+   ibrav            = 0
+/
+&ELECTRONS
+   conv_thr         = 1e-06
+   mixing_beta      = 0.7
+/
+&IONS
+   ion_dynamics     = 'bfgs'
+/
+&CELL
+   cell_dynamics    = 'bfgs'
+   press            = 150
+   press_conv_thr   = 0.05
+/
+
+ATOMIC_SPECIES
+O 15.999 O.wc-nl-rrkjus_psl.1.0.0.UPF
+Mg 24.305 Mg.wc-spnl-rrkjus_psl.1.0.0.UPF
+Si 28.085 Si.wc-nl-rrkjus_psl.1.0.0.UPF
+
+K_POINTS automatic
+9 9 9  0 0 0
+
+CELL_PARAMETERS angstrom
+2.84379744273000 0.00000000000000 4.57204077900000
+-1.42189872085000 2.39106876600000 4.57204077900000
+-1.42189872085000 -2.39106876600000 4.57204077900000
+
+ATOMIC_POSITIONS angstrom
+O 1.3732338592 -0.5948420907 3.2947163329 
+O -0.1560141170 1.4520379458 3.2947163329 
+O -1.2172197423 -0.8571958551 3.2947163329 
+O -1.3732338592 0.5948420907 -3.2947163329 
+O 0.1560141170 -1.4520379458 -3.2947163329 
+O 1.2172197423 0.8571958551 -3.2947163329 
+Mg 0.0000000000 0.0000000000 4.9467473810 
+Mg 0.0000000000 0.0000000000 -4.9467473810 
+Si 0.0000000000 0.0000000000 2.1664200327 
+Si 0.0000000000 0.0000000000 -2.1664200327 
+
